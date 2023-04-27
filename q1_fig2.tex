@@ -1,0 +1,14 @@
+\input{header.sty}
+\begin{document}
+     		\begin{tikzpicture}
+     		\draw (-7,-1) grid[step=1] (4,10);
+     		\draw[->] (-8,0) -- (5,0) node[right] {$x$};
+     		\draw[->] (0,-1) -- (0,11) node[above] {$y$};
+     		\foreach \x in {-7,...,-1}{\draw (\x,0.1cm) -- (\x,-0.1cm) node[below] {$\x\phantom{-}\strut$};}
+     		\foreach \x in {1,...,4} {\draw (\x,0.1cm) -- (\x,-0.1cm) node[below] {$\x\strut$};}
+     		\foreach \y in {1,2,...,10}{\draw (0.1cm,\y) -- (-0.1cm,\y) node[left] {$\y\strut$};}
+     		\node[below left=0.1cm] at (-0,0) {$0\strut$};
+     		\draw[domain=-5.3:4,samples=100,color=gray,very thick] plot[variable=\x] ({\x},{\x^2-4*\x+6});
+     		\draw[domain=-5.3:4,samples=100,color=black,thick] plot[variable=\x] ({\x},{(1/4)*(\x^2-4*\x+6)+2});
+		\end{tikzpicture}
+\end{document}

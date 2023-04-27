@@ -1,0 +1,15 @@
+\input{header.sty}
+\begin{document}
+\framebox[\textwidth]{
+		\begin{tikzpicture}
+     		\draw[->] (8,0) -- (22,0) node[right] {$x$};
+     		\foreach \x in {10,...,20}{\draw (\x,0.1cm) -- (\x,-0.1cm) node[below] {$\x\phantom{-}\strut$};}
+     		\draw (12,3) rectangle (16,1);
+		\draw (11,3)--(11,1);
+		\draw (11,2)--(12,2);
+		\draw (16,2)--(19,2);
+		\draw (19,3)--(19,1);
+		\draw (14,3)--(14,1);
+		\end{tikzpicture}
+		}
+\end{document}
